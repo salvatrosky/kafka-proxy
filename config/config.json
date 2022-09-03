@@ -1,0 +1,8 @@
+{
+    "_comment"   : "available enviroment disponibles: development, testing, production",
+    "_hostIP"    : "",
+    "enviroment" : "",
+    "_portProd": "",
+    "_portDev" : "",
+    "_portTest": ""
+}
