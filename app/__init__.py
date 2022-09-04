@@ -4,6 +4,7 @@ from .config import CONFIG
 
 from .views import core
 from .service1 import service1_section
+from .producer import producer_section
 
 app = Flask(__name__)
 app.config.from_pyfile("config.py")
@@ -14,6 +15,7 @@ app.register_blueprint(core)
 app.register_blueprint(service1_section,url_prefix='/service1/')
 app.register_blueprint(service1.views.subservice1_section,url_prefix='/service1/')
 
+app.register_blueprint(producer_section,url_prefix='/producer/')
 #Management of errors
 
 @app.errorhandler(404)

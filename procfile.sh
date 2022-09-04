@@ -12,6 +12,6 @@ else
 if [ -z "$hostIP" ] && [ -z "$port" ]; then
     echo "Yo have to set hostIP and port in this file"
 else 
-    uwsgi --socket $hostIP:$port --wsgi-file run.py --callable app --processes 4 --threads 2 --stats $hostIP:9191 --protocol=http 
+    uwsgi --socket $hostIP:$port --wsgi-file run.py --callable app --stats $hostIP:9191 --protocol=http --lazy-apps
 fi 
 fi
